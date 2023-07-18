@@ -4,6 +4,7 @@ class Blog extends CI_Controller{
 		parent::__construct();
 		$this->load->model('m_tulisan');
 		$this->load->model('m_pengunjung');
+        $this->load->model('m_kategori');
 		$this->m_pengunjung->count_visitor();
 	}
 	function index(){
@@ -14,7 +15,7 @@ class Blog extends CI_Controller{
         else:
             $offset = $page;
         endif;
-        $limit=5;
+        $limit=500;
         $config['base_url'] = base_url() . 'blog/index/';
             $config['total_rows'] = $jum->num_rows();
             $config['per_page'] = $limit;
@@ -43,7 +44,9 @@ class Blog extends CI_Controller{
 						$x['data']=$this->m_tulisan->berita_perpage($offset,$limit);
 						$x['category']=$this->db->get('tbl_kategori');
 						$x['populer']=$this->db->query("SELECT * FROM tbl_tulisan ORDER BY tulisan_views DESC LIMIT 5");
-						$this->load->view('depan/v_blog',$x);
+						$this->load->view('depan/v_blog',$x);	
+
+
 	}
 	function detail($slugs){
 		$slug=htmlspecialchars($slugs,ENT_QUOTES);
@@ -99,30 +102,6 @@ class Blog extends CI_Controller{
 			 }
     }
 
-		function komentar(){
-				$kode = htmlspecialchars($this->input->post('id',TRUE),ENT_QUOTES);
-				$data=$this->m_tulisan->get_berita_by_kode($kode);
-				$row=$data->row_array();
-				$slug=$row['tulisan_slug'];
-				$nama = htmlspecialchars($this->input->post('nama',TRUE),ENT_QUOTES);
-				$email = htmlspecialchars($this->input->post('email',TRUE),ENT_QUOTES);
-				$komentar = nl2br(htmlspecialchars($this->input->post('komentar',TRUE),ENT_QUOTES));
-				if(empty($nama) || empty($email)){
-					$this->session->set_flashdata('msg','<div class="alert alert-danger">Masukkan input dengan benar.</div>');
-					redirect('artikel/'.$slug);
-				}else{
-					$data = array(
-			        'komentar_nama' 			=> $nama,
-			        'komentar_email' 			=> $email,
-			        'komentar_isi' 				=> $komentar,
-							'komentar_status' 		=> 0,
-							'komentar_tulisan_id' => $kode
-					);
-
-					$this->db->insert('tbl_komentar', $data);
-					$this->session->set_flashdata('msg','<div class="alert alert-info">Komentar Anda akan tampil setelah moderasi.</div>');
-					redirect('artikel/'.$slug);
-				}
-		}
+		
 
 }

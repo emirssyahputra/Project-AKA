@@ -61,7 +61,7 @@
         </li>
         <li>
             <a href="<?php echo base_url().'admin/peminjaman'?>">
-            <i class="fa fa-home"></i> <span>Peminjaman</span>
+            <i class="fa fa-pencil-square-o"></i> <span>Peminjaman</span>
             <span class="pull-right-container">
               <small class="label pull-right"></small>
             </span>

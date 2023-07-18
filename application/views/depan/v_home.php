@@ -2,194 +2,131 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratorium Fisika - SMA S Al Kautsar</title>
-    <link rel="shorcut icon" href="<?php echo base_url().'theme/images/icon.png'?>">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo base_url().'theme/css/bootstrap.min.css'?>">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="<?php echo base_url().'theme/css/font-awesome.min.css'?>">
-    <!-- Simple Line Font -->
-    <link rel="stylesheet" href="<?php echo base_url().'theme/css/simple-line-icons.css'?>">
-    <!-- Slider / Carousel -->
-    <link rel="stylesheet" href="<?php echo base_url().'theme/css/slick.css'?>">
-    <link rel="stylesheet" href="<?php echo base_url().'theme/css/slick-theme.css'?>">
-    <link rel="stylesheet" href="<?php echo base_url().'theme/css/owl.carousel.min.css'?>">
-    <!-- Main CSS -->
-    <link href="<?php echo base_url().'theme/css/style.css'?>" rel="stylesheet">
-    <?php
-        function limit_words($string, $word_limit){
-            $words = explode(" ",$string);
-            return implode(" ",array_splice($words,0,$word_limit));
-        }
-    ?>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Laboratorium Fisika - SMA S Al Kautsar</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="<?php echo base_url().'theme/images/icon.png'?>" rel="icon">
+  <link href="<?php echo base_url().'theme/images/icon.png'?>" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="<?php echo base_url().'theme/vendor/animate.css/animate.min.css'?>" rel="stylesheet">
+  <link href="<?php echo base_url().'theme/vendor/bootstrap/css/bootstrap.min.css'?>" rel="stylesheet">
+  <link href="<?php echo base_url().'theme/vendor/bootstrap-icons/bootstrap-icons.css'?>" rel="stylesheet">
+  <link href="<?php echo base_url().'theme/vendor/boxicons/css/boxicons.min.css'?>" rel="stylesheet">
+  <link href="<?php echo base_url().'theme/vendor/glightbox/css/glightbox.min.css'?>" rel="stylesheet">
+  <link href="<?php echo base_url().'theme/vendor/remixicon/remixicon.css'?>" rel="stylesheet">
+  <link href="<?php echo base_url().'theme/vendor/swiper/swiper-bundle.min.css'?>" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="<?php echo base_url().'theme/css/style.css'?>" rel="stylesheet">
+
+  
 </head>
 
 <body>
-    <!--============================= HEADER =============================-->
-    <div class="header-topbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-6 col-sm-8 col-md-9">
-                    <div class="header-top_address">
-                        <div class="header-top_list">
-                            <span class="icon-phone"></span>0721 781578
-                        </div>
-                        <div class="header-top_list">
-                            <span class="icon-envelope-open"></span>smaalkautsarlampung@gmail.com
-                        </div>
-                        <div class="header-top_list">
-                            <span class="icon-location-pin"></span>Bandar Lampung, Lampung, Indonesia
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div data-toggle="affix">
-        <div class="container nav-menu2">
-            <div class="row">
-                <div class="col-md-12">
-                    <nav class="navbar navbar2 navbar-toggleable-md navbar-light bg-faded">
-                        <button class="navbar-toggler navbar-toggler2 navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
-                            <span class="icon-menu"></span>
-                        </button>
-                        <a href="<?php echo site_url('');?>" class="navbar-brand nav-brand2"><img class="img img-responsive" width="200px;" src="<?php echo base_url().'theme/images/logo-dark.png'?>"></a>
-                        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="<?php echo site_url('');?>">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link" href="<?php echo site_url('blog');?>">Alat</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="<?php echo site_url('guru');?>">Tendik</a>
-                                </li>
-                            	<li class="nav-item">
-                                    <a class="nav-link" href="<?php echo site_url('download');?>">Modul</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="<?php echo site_url('about');?>">About</a>
-                                </li>
-                                    <li>
-                                    <a href="<?php echo site_url('administrator');?>" class="login-btn">Login</a>
-                                </li>
-                            
-                             </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-      </div>
-<section>
-    <div class="slider_img layout_two">
-        <div id="carousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel" data-slide-to="1"></li>
-                <li data-target="#carousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <img class="d-block" src="<?php echo base_url().'theme/images/slider.jpg'?>" alt="First slide">
-                    <div class="carousel-caption d-md-block">
-                        <div class="slider_title">
-                            <h1>Laboratorium Fisika SMA S Al Kautsar</h1>
-                            <h4>Selamat Datang di Web Laboratorium Fisika SMA Al Kautsar</h4>
-                            <div class="slider-btn">
-                                <a href="<?php echo site_url('artikel');?>" class="btn btn-default">Learn more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block" src="<?php echo base_url().'theme/images/slider-2.jpg'?>" alt="Second slide">
-                    <div class="carousel-caption d-md-block">
-                        <div class="slider_title">
-                            <h1>Guru Bekualitas Tinggi</h1>
-                            <h4>Guru merupakan faktor penting dalam proses belajar-mengajar.<br> Itulah kenapa kami mendatangkan guru-guru <br>terbaik dari berbagai penjuru.</h4>
-                            <div class="slider-btn">
-                                <a href="<?php echo site_url('guru');?>" class="btn btn-default">Learn more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block" src="<?php echo base_url().'theme/images/slider-3.jpg'?>" alt="Third slide">
-                    <div class="carousel-caption d-md-block">
-                        <div class="slider_title">
-                            <h1>Proses Belajar Interatif</h1>
-                            <h4>Kami membuat proses belajar mengajar menjadi lebih interatif.<br> dengan demikian siswa lebih menyukai <br>proses belajar.</h4>
-                            <div class="slider-btn">
-                                <a href="<?php echo site_url('galeri');?>" class="btn btn-default">Learn more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-                <i class="icon-arrow-left fa-slider" aria-hidden="true"></i>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-                <i class="icon-arrow-right fa-slider" aria-hidden="true"></i>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-</section>
-<!--//END HEADER -->
-<!--============================= ABOUT =============================-->
-<section class="clearfix about about-style2">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-15">
-               <h2>Laboratorium Fisika </h2>
-               <p>Laboratorium fisika adalah ruang khusus yang digunakan untuk melakukan eksperimen dan penelitian dalam bidang fisika. Lab fisika biasanya dilengkapi dengan peralatan dan instrumen khusus yang memungkinkan pengukuran dan observasi fenomena fisika.</p>
 
-            </div>
-        </div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      
+      
+      <a href="<?php echo site_url('');?>" class="logo me-auto"><img src="<?php echo base_url().'theme/images/logo-dark.png'?>" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="active" href="<?php echo site_url('home');?>">Home</a></li>
+
+          <li><a href="<?php echo site_url('blog');?>"><span>Alat</span></a></li>
+          <li><a href="<?php echo site_url('guru');?>">Tendik</a></li>
+          <li><a href="<?php echo site_url('download');?>">Modul</a></li>
+          <li><a href="<?php echo site_url('about');?>">About</a></li>
+          <li><a href="<?php echo site_url('administrator');?>" class="getstarted">Login</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
     </div>
-</section>
-<!--//END ABOUT -->
-<!--============================= OUR COURSES =============================-->
-<section class="our_courses">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h2 class="mb-5">Alat Laboratorium</h2>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url('<?php echo base_url();?>theme/images/slider.jpg')">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Laboratorium Fisika SMA S Al Kautsar</h2>
+              <p class="animate__animated animate__fadeInUp">Selamat Datang di Web Laboratorium Fisika SMA Al Kautsar</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
             </div>
+          </div>
         </div>
-        <div class="row">
-          <?php foreach ($berita->result() as $row) :?>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                <div class="courses_box mb-4">
-                    <div class="course-img-wrap">
-                        <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" class="img-fluid" alt="courses-img">
-                    </div>
-                    <!-- // end .course-img-wrap -->
-                    <a href="<?php echo site_url('artikel/'.$row->tulisan_slug);?>" class="course-box-content">
-                        <h3 style="text-align:center;"><?php echo $row->tulisan_judul;?></h3>
-                    </a>
-                </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url('<?php echo base_url();?>theme/images/slider-2.jpg')">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Guru Berkualitas Tinggi</h2>
+              <p class="animate__animated animate__fadeInUp">Guru merupakan faktor penting dalam proses belajar-mengajar.<br> Itulah kenapa kami mendatangkan guru-guru <br>terbaik dari berbagai penjuru.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
             </div>
-          <?php endforeach;?>
-        </div> <br>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <a href="<?php echo site_url('blog');?>" class="btn btn-default btn-courses">View More</a>
-            </div>
+          </div>
         </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url('<?php echo base_url();?>theme/images/slider-3.jpg')">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Proses Belajar Interatif</h2>
+              <p class="animate__animated animate__fadeInUp">Kami membuat proses belajar mengajar menjadi lebih interatif.<br> Dengan demikian siswa lebih menyukai <br>proses belajar.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
     </div>
-</section>
-<!--//END OUR COURSES -->
-<!--============================= DETAILED CHART =============================-->
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-15">
+            <h2>Laboratorium Fisika</h2>
+            <h5>Laboratorium fisika adalah ruang khusus yang digunakan untuk melakukan eksperimen dan penelitian dalam bidang fisika. Lab fisika biasanya dilengkapi dengan peralatan dan instrumen khusus yang memungkinkan pengukuran dan observasi fenomena fisika.</h5>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+    <!--============================= DETAILED CHART =============================-->
 <div class="detailed_chart ">
     <div class="container">
         <div class="row justify-content-center  ">
@@ -198,7 +135,7 @@
                     <img src="<?php echo base_url().'theme/images/chart-icon_1.png'?>" class="img-fluid" alt="chart_icon">
                 </div>
                 <div class="chart-text">
-                    <p><span class="counter"><?php echo $tot_guru;?></span> Tendik
+                    <p><span class="counter" data-target="<?php echo $tot_guru;?>">0</span> Tendik
                     </p>
                 </div>
             </div>
@@ -208,7 +145,7 @@
                     <i class="fa-light fa-screwdriver-wrench" style="color: #ffffff;"></i>
                 </div>
                 <div class="chart-text">
-                    <p><span class="counter"><?php echo $tot_tulisan;?></span> Alat
+                    <p><span class="counter" data-target="<?php echo $tot_tulisan;?>">0</span> Alat
                     </p>
                 </div>
             </div>
@@ -216,89 +153,141 @@
     </div>
 </div>
 <!--//END DETAILED CHART -->
-<!--============================= OUR TEACHER =============================-->
-<section class="our-teachers">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2 class="mb-5">Tenaga Pendidik</h2>
-                </div>
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="col-md-12 text-center">
+                <h1 class="mb-1"><b>ALAT LABORATORIUM</b></h1><br>
             </div>
-        <div class="row">
-                <?php foreach ($guru->result() as $row) : ?>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="admission_insruction">
-                          <?php if(empty($row->guru_photo)):?>
-                            <img src="<?php echo base_url().'assets/images/blank.png';?>" class="img-fluid" alt="#">
-                          <?php else:?>
-                            <img src="<?php echo base_url().'assets/images/'.$row->guru_photo;?>" class="img-fluid" alt="#">
-                          <?php endif;?>
-                            <p class="text-center mt-3"><span><?php echo $row->guru_nama;?></span>
-                                <br>
-                                <?php echo $row->guru_mapel;?></p>
-                        </div>
-                	</div>
-             	<?php endforeach;?>
-        </div> <br>
-        </div>
-</section>
-<!--//END OUR TEACHER -->
-<!--============================= FOOTER =============================-->
-<footer>
-     <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="foot-logo">
-                    <a href="<?php echo site_url();?>">
-                        <img src="<?php echo base_url().'theme/images/logo-white.png'?>" class="img-fluid" alt="footer_logo">
-                    </a>
-                    <p><?php echo date('Y');?> © copyright by <br>SMA Al Kautsar</a>. <br>All rights reserved.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 ml-auto">
-                    <div class="sitemap">
-                        <h3>Menu</h3>
-                        <ul>
-                            <li><a href="<?php echo site_url();?>">Home</a></li>
-                            <li><a href="<?php echo site_url('blog');?>">Alat</a></li>
-                            <li><a href="<?php echo site_url('download');?>">Modul </a></li>
-                        </ul>
-                    </div>
-                </div>
-               
-                <div class="col-md-3 ml-auto">
-                    <div class="address">
-                        <h3>SMA S Al Kautsar</h3>
-                        <p>Bandar Lampung, 35144
-                            Lampung, Indonesia
-                        </p>
-                        <p><span>Phone:</span> 0721 781578
-                            <br><span>Email:</span> smaalkautsarlampung@gmail.com</p>
-                            <ul class="footer-social-icons">
-                                        <li><a href="https://www.instagram.com/smaalkautsar/?hl=id"><i class="fa fa-instagram fa-in" aria-hidden="true"></i></a></li>
-                                        <li><a href="https://www.youtube.com/@smaalkautsarlampung9585/featured"><i class="fa fa-youtube fa-tw" aria-hidden="true"></i></a></li>
-                                    </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!--//END FOOTER -->
-        <!-- jQuery, Bootstrap JS. -->
-        <script src="<?php echo base_url().'theme/js/jquery.min.js'?>"></script>
-        <script src="<?php echo base_url().'theme/js/tether.min.js'?>"></script>
-        <script src="<?php echo base_url().'theme/js/bootstrap.min.js'?>"></script>
-        <!-- Plugins -->
-        <script src="<?php echo base_url().'theme/js/slick.min.js'?>"></script>
-        <script src="<?php echo base_url().'theme/js/waypoints.min.js'?>"></script>
-        <script src="<?php echo base_url().'theme/js/counterup.min.js'?>"></script>
-        <script src="<?php echo base_url().'theme/js/owl.carousel.min.js'?>"></script>
-        <script src="<?php echo base_url().'theme/js/validate.js'?>"></script>
-        <script src="<?php echo base_url().'theme/js/tweetie.min.js'?>"></script>
-        <!-- Subscribe -->
-        <script src="<?php echo base_url().'theme/js/subscribe.js'?>"></script>
-        <!-- Script JS -->
-        <script src="<?php echo base_url().'theme/js/script.js'?>"></script>
-    </body>
+      <div class="container">
 
-    </html>
+        
+
+<div class="row portfolio-container">
+  <?php foreach ($berita->result() as $row): ?>
+    <div class="col-lg-4 col-md-6 portfolio-item <?php echo str_replace(' ', '-', $row->tulisan_kategori_nama); ?>">
+      <div class="portfolio-wrap">
+        <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar; ?>" class="img-fluid" alt="">
+        <div class="portfolio-info">
+          <h4><?php echo $row->tulisan_judul;?></h4>
+          <p><?php echo $row->tulisan_kategori_nama;?></p>
+          <div class="portfolio-links">
+            <a href="<?php echo base_url().'assets/images/'.$row->tulisan_gambar; ?>" data-gallery="portfolioGallery" class="portfolio-lightbox" title="<?php echo $row->tulisan_judul;?>"><i class="bx bx-plus"></i></a>
+            <a href="<?php echo site_url('artikel/'.$row->tulisan_slug);?>"  class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <?php endforeach; ?>
+</div>
+        <div class="col-md-12 text-center">
+                <a href="<?php echo site_url('blog');?>" class="btn btn-danger">View More</a>
+            </div>
+      </div>
+    </section><!-- End Portfolio Section -->
+
+
+<script>
+    // Fungsi untuk membuat counter berhitung
+    function count(element) {
+        const target = +element.getAttribute('data-target');
+        const countSpeed = 200; // Kecepatan hitungan dalam milidetik
+        const increment = target / countSpeed;
+
+        let currentCount = 0;
+
+        const timer = setInterval(() => {
+            if (currentCount >= target) {
+                clearInterval(timer);
+                currentCount = target;
+            }
+
+            element.textContent = Math.floor(currentCount);
+            currentCount += increment;
+        }, 1);
+    }
+
+    // Mendapatkan semua elemen dengan kelas "counter"
+    const counters = document.querySelectorAll('.counter');
+
+    // Memulai counter untuk setiap elemen
+    counters.forEach(counter => {
+        count(counter);
+    });
+</script>
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>SMA S Al Kautsar</h3>
+              <p>
+                Bandar Lampung, 35144 <br>
+                Lampung, Indonesia<br><br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://www.youtube.com/@smaalkautsarlampung9585/featured" class="twitter"><i class="bx bxl-youtube"></i></a>
+                <a href="https://www.instagram.com/smaalkautsar/?hl=id" class="instagram"><i class="bx bxl-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Menu</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?php echo site_url('home');?>">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?php echo site_url('blog');?>">Alat</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?php echo site_url('download');?>">Modul</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>About Us</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?php echo site_url('about');?>">About</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?php echo site_url('guru');?>">Tendik</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <a href="<?php echo site_url();?>">
+                        <img src="<?php echo base_url().'theme/images/logo-white.png'?>" class="img-fluid" alt="footer_logo">
+                    </a><br>
+            <p><strong>Phone:</strong> 0721 781578<br>
+                <strong>Email:</strong> smaalkautsarlampung@gmail.com<br></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>SMA S Al Kautsar</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="<?php echo base_url().'theme/js/jquery.min.js'?>"></script>
+  <script src="<?php echo base_url().'theme/vendor/bootstrap/js/bootstrap.bundle.min.js'?>"></script>
+  <script src="<?php echo base_url().'theme/vendor/glightbox/js/glightbox.min.js'?>"></script>
+  <script src="<?php echo base_url().'theme/vendor/isotope-layout/isotope.pkgd.min.js'?>"></script>
+  <script src="<?php echo base_url().'theme/vendor/swiper/swiper-bundle.min.js'?>"></script>
+  <script src="<?php echo base_url().'theme/vendor/waypoints/noframework.waypoints.js'?>"></script>
+  <script src="<?php echo base_url().'theme/vendor/php-email-form/validate.js'?>"></script>
+
+  <!-- Template Main JS File -->
+  <script src="<?php echo base_url().'theme/js/main.js'?>"></script>
+
+</body>
+
+</html>

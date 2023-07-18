@@ -48,7 +48,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">Menu Utama</li>
-        <li class="active">
+        <li >
           <a href="<?php echo base_url().'admin/dashboard'?>">
             <i class="fa fa-home"></i> <span>Dashboard</span>
             <span class="pull-right-container">
@@ -86,7 +86,7 @@
             </span>
           </a>
         </li>
-        <li>
+        <li class="active">
           <a href="<?php echo base_url().'admin/files'?>">
             <i class="fa fa-book"></i> <span>Modul</span>
             <span class="pull-right-container">
@@ -96,29 +96,13 @@
         </li>
         <li>
           <a href="<?php echo base_url().'admin/lihatpinjam'?>">
-            <i class="fa fa-book"></i> <span>Peminjaman Laboratorium</span>
+            <i class="fa fa-pencil-square-o"></i> <span>Peminjaman Laboratorium</span>
             <span class="pull-right-container">
               <small class="label pull-right"></small>
             </span>
           </a>
         </li>
-        <li>
-          <a href="<?php echo base_url().'admin/inbox'?>">
-            <i class="fa fa-envelope"></i> <span>Inbox</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-green"><?php echo $jum_pesan;?></small>
-            </span>
-          </a>
-        </li>
-
-        <li>
-          <a href="<?php echo base_url().'admin/komentar'?>">
-            <i class="fa fa-comments"></i> <span>Komentar</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-green"><?php echo $jum_comment;?></small>
-            </span>
-          </a>
-        </li>
+        
 
          <li>
             <a href="<?php echo base_url().'admin/login/logout'?>">
@@ -437,12 +421,8 @@
                                   <textarea class="form-control" rows="3" name="xdeskripsi" placeholder="Deskripsi ..." required></textarea>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="inputUserName" class="col-sm-4 control-label">Oleh</label>
-                                <div class="col-sm-7">
-                                  <input type="text" name="xoleh" class="form-control" id="inputUserName" placeholder="Oleh" required>
-                                </div>
-                            </div>
+                      
+                          
                             <div class="form-group">
                                 <label for="inputUserName" class="col-sm-4 control-label">File</label>
                                 <div class="col-sm-7">
@@ -496,12 +476,7 @@
                                   <textarea class="form-control" rows="3" name="xdeskripsi" placeholder="Deskripsi ..." required><?php echo $deskripsi;?></textarea>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="inputUserName" class="col-sm-4 control-label">Oleh</label>
-                                <div class="col-sm-7">
-                                  <input type="text" name="xoleh" class="form-control" value="<?php echo $oleh;?>" id="inputUserName" placeholder="Oleh" required>
-                                </div>
-                            </div>
+                           
                             <div class="form-group">
                                 <label for="inputUserName" class="col-sm-4 control-label">File</label>
                                 <div class="col-sm-7">

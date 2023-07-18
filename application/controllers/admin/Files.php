@@ -46,7 +46,10 @@ class Files extends CI_Controller{
 	                        $file=$gbr['file_name'];
 							$judul=strip_tags($this->input->post('xjudul'));
 							$deskripsi=$this->input->post('xdeskripsi');
-							$oleh=strip_tags($this->input->post('xoleh'));
+                      $kode=$this->session->userdata('idadmin');
+                                    $user=$this->m_pengguna->get_pengguna_login($kode);
+									$p=$user->row_array();
+									$oleh=$p['pengguna_nama'];
 	
 							$this->m_files->simpan_file($judul,$deskripsi,$oleh,$file);
 							echo $this->session->set_flashdata('msg','success');
@@ -78,7 +81,10 @@ class Files extends CI_Controller{
 	                        $kode=$this->input->post('kode');
 	                        $judul=strip_tags($this->input->post('xjudul'));
 							$deskripsi=$this->input->post('xdeskripsi');
-							$oleh=strip_tags($this->input->post('xoleh'));
+                      		$kode=$this->session->userdata('idadmin');
+                                    $user=$this->m_pengguna->get_pengguna_login($kode);
+									$p=$user->row_array();
+									$oleh=$p['pengguna_nama'];
 							$data=$this->input->post('file');
 							$path='./assets/files/'.$data;
 							unlink($path);
@@ -95,7 +101,10 @@ class Files extends CI_Controller{
 						$kode=$this->input->post('kode');
 	                    $judul=strip_tags($this->input->post('xjudul'));
 						$deskripsi=$this->input->post('xdeskripsi');
-						$oleh=strip_tags($this->input->post('xoleh'));
+                  		$kode=$this->session->userdata('idadmin');
+                                    $user=$this->m_pengguna->get_pengguna_login($kode);
+									$p=$user->row_array();
+									$oleh=$p['pengguna_nama'];
 						$this->m_files->update_file_tanpa_file($kode,$judul,$deskripsi,$oleh);
 						echo $this->session->set_flashdata('msg','info');
 						redirect('admin/files');

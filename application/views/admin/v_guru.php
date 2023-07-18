@@ -45,7 +45,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">Menu Utama</li>
-        <li class="active">
+        <li >
           <a href="<?php echo base_url().'admin/dashboard'?>">
             <i class="fa fa-home"></i> <span>Dashboard</span>
             <span class="pull-right-container">
@@ -75,7 +75,7 @@
             </span>
           </a>
         </li>
-        <li>
+        <li class="active">
           <a href="<?php echo base_url().'admin/guru'?>">
             <i class="fa fa-graduation-cap"></i> <span>Data Tendik</span>
             <span class="pull-right-container">
@@ -93,29 +93,13 @@
         </li>
         <li>
           <a href="<?php echo base_url().'admin/lihatpinjam'?>">
-            <i class="fa fa-book"></i> <span>Peminjaman Laboratorium</span>
+            <i class="fa fa-pencil-square-o"></i> <span>Peminjaman Laboratorium</span>
             <span class="pull-right-container">
               <small class="label pull-right"></small>
             </span>
           </a>
         </li>
-        <li>
-          <a href="<?php echo base_url().'admin/inbox'?>">
-            <i class="fa fa-envelope"></i> <span>Inbox</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-green"><?php echo $jum_pesan;?></small>
-            </span>
-          </a>
-        </li>
-
-        <li>
-          <a href="<?php echo base_url().'admin/komentar'?>">
-            <i class="fa fa-comments"></i> <span>Komentar</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-green"><?php echo $jum_comment;?></small>
-            </span>
-          </a>
-        </li>
+        
 
          <li>
             <a href="<?php echo base_url().'admin/login/logout'?>">

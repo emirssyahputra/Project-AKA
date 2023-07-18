@@ -54,7 +54,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">Menu Utama</li>
-        <li class="active">
+        <li >
           <a href="<?php echo base_url().'admin/jadwal'?>">
             <i class="fa fa-calendar"></i> <span>Jadwal</span>
             <span class="pull-right-container">
@@ -62,9 +62,9 @@
             </span>
           </a>
         </li>
-        <li>
+        <li class="active">
             <a href="<?php echo base_url().'admin/peminjaman'?>">
-            <i class="fa fa-home"></i> <span>Peminjaman</span>
+            <i class="fa fa-pencil-square-o"></i> <span>Peminjaman</span>
             <span class="pull-right-container">
               <small class="label pull-right"></small>
             </span>

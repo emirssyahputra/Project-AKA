@@ -33,7 +33,7 @@ class Guru extends CI_Controller{
 	                        $config['source_image']='./assets/images/'.$gbr['file_name'];
 	                        $config['create_thumb']= FALSE;
 	                        $config['maintain_ratio']= FALSE;
-	                        $config['quality']= '60%';
+	                        $config['quality']= '100%';
 	                        $config['width']= 300;
 	                        $config['height']= 300;
 	                        $config['new_image']= './assets/images/'.$gbr['file_name'];
@@ -88,7 +88,7 @@ class Guru extends CI_Controller{
 	                        $config['source_image']='./assets/images/'.$gbr['file_name'];
 	                        $config['create_thumb']= FALSE;
 	                        $config['maintain_ratio']= FALSE;
-	                        $config['quality']= '60%';
+	                        $config['quality']= '100%';
 	                        $config['width']= 300;
 	                        $config['height']= 300;
 	                        $config['new_image']= './assets/images/'.$gbr['file_name'];
