@@ -1,0 +1,46 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/system.*
+RewriteRule ^(.*)$ index.php?/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?/$1 [L]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^fisika\.smas\-aka\.my\.id$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.fisika\.smas\-aka\.my\.id$
+RewriteRule ^/?$ "https\:\/\/fisika\.smas\-aka\.my\.id\/" [R=301,L]
+
+RewriteCond %{HTTP_REFERER} !^http://biologi.smas-aka.my.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://biologi.smas-aka.my.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://fisika.smas-aka.my.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://fisika.smas-aka.my.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://perpustakaan.smas-aka.my.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://perpustakaan.smas-aka.my.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://smas-aka.my.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://smas-aka.my.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.biologi.smas-aka.my.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.biologi.smas-aka.my.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.fisika.smas-aka.my.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.fisika.smas-aka.my.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.perpustakaan.smas-aka.my.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.perpustakaan.smas-aka.my.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.smas-aka.my.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.smas-aka.my.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://biologi.smas-aka.my.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://biologi.smas-aka.my.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://fisika.smas-aka.my.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://fisika.smas-aka.my.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://perpustakaan.smas-aka.my.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://perpustakaan.smas-aka.my.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://smas-aka.my.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://smas-aka.my.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.biologi.smas-aka.my.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.biologi.smas-aka.my.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.fisika.smas-aka.my.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.fisika.smas-aka.my.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.perpustakaan.smas-aka.my.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.perpustakaan.smas-aka.my.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.smas-aka.my.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.smas-aka.my.id$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+
